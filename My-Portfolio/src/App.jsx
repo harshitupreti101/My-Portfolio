@@ -4,6 +4,7 @@ import HeroSection from './Components/HeroSection'
 import ProjectsList from './Components/ProjectsList'
 import TechStack from './Components/TechStack'
 import ResponsiveShowcase from './Components/ResponsiveShowcase'
+import Email from './Components/Email'
  
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <ProjectsList/>
       <TechStack/>
       <ResponsiveShowcase/>
+      <Email/>
     </>
   )
 }

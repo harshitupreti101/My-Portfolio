@@ -36,18 +36,22 @@ const HeroSection = () => {
                     <div useRef={aboutRef} className={`mt-30 md:mt-20 lg:mt-0 h-150 md:h-160 lg:h-180 pt-8 w-[100%]`}>
                         <img className="h-full" src={iphoneFrame} alt="" />
                     </div>
-                    <div className='flex flex-col items-center gap-3 w-[80%]'>
-                        <div className='gap-3 flex justify-center w-[80%] font-extrabold py-2 bg-gradient-to-r from-[#5FD5E9] to-blue-600 outline-none rounded-2xl text-white cursor-pointer hover:bg-none hover:bg-white hover:text-blue-500 hover:shadow-xl'>
-                            <h4>Try it out!</h4>
-                            <i className="ri-arrow-right-up-line text-lg"></i>
-                        </div>
-                        <div className='group gap-3 flex justify-center items-center w-[80%] font-extrabold py-2 bg-black outline-none rounded-2xl text-white cursor-pointer hover:bg-none hover:bg-white hover:text-black hover:shadow-xl'
-                            onMouseEnter={() => setIsHover(true)}
-                            onMouseLeave={() => setIsHover(false)}>
-                            <img className="group-hover:h-[22px] h-8" src={isHover ? githubIcon : githubIconHover} alt="" />
-                            <h5>GitHub Repo</h5>
-                            <i className="ri-arrow-right-up-line text-lg"></i>
-                        </div>
+                    <div className='gap-3 w-[60%]'>
+                        <a href='https://harshitupreti101.github.io/ToDo-App-reactjs/' target='_blank'>
+                            <div className='gap-3 flex justify-center font-extrabold py-2 bg-gradient-to-r from-[#5FD5E9] to-blue-600 outline-none rounded-2xl text-white cursor-pointer hover:bg-none hover:bg-white hover:text-blue-500 hover:shadow-xl'>
+                                <h4>Try it out!</h4>
+                                <i className="ri-arrow-right-up-line text-lg"></i>
+                            </div>
+                        </a>
+                        <a href="https://github.com/harshitupreti101/ToDo-App-reactjs" target='_blank'>
+                            <div className='group gap-3 flex justify-center items-center mt-3 font-extrabold py-2 bg-black outline-none rounded-2xl text-white cursor-pointer hover:bg-none hover:bg-white hover:text-black hover:shadow-xl'
+                                onMouseEnter={() => setIsHover(true)}
+                                onMouseLeave={() => setIsHover(false)}>
+                                <img className="group-hover:h-[22px] h-8" src={isHover ? githubIcon : githubIconHover} alt="" />
+                                <h5>GitHub Repo</h5>
+                                <i className="ri-arrow-right-up-line text-lg"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
