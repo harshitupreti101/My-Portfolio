@@ -10,3 +10,6 @@ html, body {
 #projects-list::-webkit-scrollbar {
   display: none;
 }
+#tech-stack-list::-webkit-scrollbar {
+  display: none;
+}
