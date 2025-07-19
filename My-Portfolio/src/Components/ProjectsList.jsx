@@ -1,0 +1,66 @@
+import React,{useState} from 'react'
+import ems from '../assets/ems.png'
+import ecom from '../assets/ecom.png'
+import githubIcon from '../assets/githubIcon.png'
+import githubIconHover from '../assets/githubIconHover.png'
+const ProjectsList = () => {
+    const [isHover1, setIsHover1] = useState(false);
+    const [isHover2, setIsHover2] = useState(false);
+    return (
+        <div className='pl-20 pt-20'>
+            <div className='text-2xl md:text-3xl lg:text-6xl font-bold'>
+                <h1>Some of the things</h1>
+                <h1 className='mt-4 bg-gradient-to-r from-[#5FD5E9] via-blue-700 to-blue-950  bg-clip-text text-transparent'>I've built.</h1>
+            </div>
+            <div id="projects-list" className='mt-20 flex overflow-auto gap-6 pb-30'>
+                <div className='flex-shrink-0  w-[60vw]'>
+                    <img className="w-[60vw] aspect-[2/1] shadow-2xl cursor-pointer" src={ems} alt="" />
+                    <div className='mt-10'>
+                        <span className='py-2 px-5 mr-2 bg-[#C6CFDD] text-sm rounded-xl'>React</span>
+                        <span className='py-2 px-5 mr-2 bg-[#C6CFDD] text-sm rounded-xl'>CSS</span>
+                        <span className='py-2 px-5 mr-2 bg-[#C6CFDD] text-sm rounded-xl'>Tailwindcss</span>
+                        <span className='py-2 px-5 mr-2 bg-[#C6CFDD] text-sm rounded-xl'>HTML</span>
+                    </div>
+                    <div className='flex md:gap-3 lg:gap-5 mt-10 h-12'>
+                        <div className='gap-3 flex justify-center  items-center font-extrabold py-2 px-5 bg-gradient-to-r from-[#5FD5E9] to-blue-600 outline-none rounded-2xl text-white cursor-pointer hover:bg-none hover:bg-white hover:text-blue-500 hover:shadow-xl'>
+                            <h4>Try it out!</h4>
+                            <i className="ri-arrow-right-up-line text-lg"></i>
+                        </div>
+                        <div className='group gap-3 flex justify-center items-center font-extrabold py-2 px-4 bg-black outline-none rounded-2xl text-white cursor-pointer hover:bg-none hover:bg-white hover:text-black hover:shadow-xl'
+                            onMouseEnter={() => setIsHover1(true)}
+                            onMouseLeave={() => setIsHover1(false)}>
+                            <img className="group-hover:h-[22px] h-8" src={isHover1 ? githubIcon : githubIconHover} alt="" />
+                            <h5>GitHub Repo</h5>
+                            <i className="ri-arrow-right-up-line text-lg"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='flex-shrink-0 w-[60vw]'>
+                    <img className="w-[60vw] aspect-[2/1]  shadow-2xl cursor-pointer" src={ecom} alt="" />
+                    <div className='mt-10 '>
+                        <span className='py-2 px-5 mr-2 bg-[#C6CFDD] text-sm rounded-xl'>React</span>
+                        <span className='py-2 px-5 mr-2 bg-[#C6CFDD] text-sm rounded-xl'>CSS</span>
+                        <span className='py-2 px-5 mr-2 bg-[#C6CFDD] text-sm rounded-xl'>Tailwindcss</span>
+                        <span className='py-2 px-5 mr-2 bg-[#C6CFDD] text-sm rounded-xl'>HTML</span>
+                    </div>
+                    <div className='flex md:gap-3 lg:gap-5 mt-10 h-12'>
+                        <div className='gap-3 flex justify-center items-center font-extrabold py-2 px-5 bg-gradient-to-r from-[#5FD5E9] to-blue-600 outline-none rounded-2xl text-white cursor-pointer hover:bg-none hover:bg-white hover:text-blue-500 hover:shadow-xl'>
+                            <h4>Try it out!</h4>
+                            <i className="ri-arrow-right-up-line text-lg"></i>
+                        </div>
+                        <div className='group gap-3 flex justify-center items-center font-extrabold py-2 px-4 bg-black outline-none rounded-2xl text-white cursor-pointer hover:bg-none hover:bg-white hover:text-black hover:shadow-xl'
+                            onMouseEnter={() => setIsHover2(true)}
+                            onMouseLeave={() => setIsHover2(false)}>
+                            <img className="group-hover:h-[22px] h-8" src={isHover2 ? githubIcon : githubIconHover} alt="" />
+                            <h5>GitHub Repo</h5>
+                            <i className="ri-arrow-right-up-line text-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default ProjectsList

@@ -1,0 +1,12 @@
+@import "tailwindcss";
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html, body {
+  margin: 0px;
+}
+#projects-list::-webkit-scrollbar {
+  display: none;
+}
